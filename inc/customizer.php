@@ -227,7 +227,7 @@ new \Kirki\Field\Checkbox_Switch(
   [
     'settings'    => 'narasix_post_featured',
     'label'       => esc_html__( 'Featured', 'narasix' ),
-    'description' => esc_html__( 'Show or Hide Featured Section', 'narasix' ),
+    'description' => esc_html__( 'Show or Hide Featured Section *Required enable post sticky', 'narasix' ),
     'section'     => 'frontpage_section',
     'default'     => 'off',
     'choices'     => [
