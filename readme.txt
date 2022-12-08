@@ -27,7 +27,7 @@ Hidunks is a WordPress Blog Theme for personal use. Fully responsive design. Thi
     - Background Image *example bg https://narasix.hidunks.com/bg.webp
     - Typography
     - Header
-    - Fronpage
+    - Frontpage
     - Post Card
     - Single Post 
 
