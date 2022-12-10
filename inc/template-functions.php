@@ -91,30 +91,6 @@ add_editor_style('css/editor-style.css');
    return $urls;
    }
 
-   add_filter( 'the_content', 'narasix_lazyload_images' );
-   add_filter( 'widget_text', 'narasix_lazyload_images' );
-   add_filter( 'wp_get_attachment_image_attributes', 'narasix_lazyload', 10, 2 );
-   
-   // Replace the image attributes in Post/Page Content
-   function narasix_lazyload_images( $content ) {
-	 $content = preg_replace( '/(<img.+)(src)/Ui', '$1data-$2', $content );
-	 $content = preg_replace( '/(<img.+)(srcset)/Ui', '$1data-$2', $content );
-	 return $content;
-   }
-   
-   // Replace the image attributes in Post Listing, Related Posts, etc.
-   function narasix_lazyload( $atts, $attachment ) {
-	 $atts['data-src'] = $atts['src'];
-	 unset( $atts['src'] );
-	 
-	 if( isset( $atts['srcset'] ) ) {
-	   $atts['data-srcset'] = $atts['srcset'];
-	   unset( $atts['srcset'] );
-	 }
-   
-	 return $atts;
-   }
-
    //excerpt text
    function excerpt($limit) {
 	$excerpt = explode(' ', get_the_excerpt(), $limit);
